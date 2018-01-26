@@ -1,0 +1,1 @@
+pin 25 AN45/C1INA/RPB5/RB5
