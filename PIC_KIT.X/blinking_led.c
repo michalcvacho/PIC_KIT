@@ -1,7 +1,7 @@
 
 
 #define SYSCLK 16000000L // Give the system?s clock frequency
- 
+#define _SUPPRESS_PLIB_WARNING 1
 #include <p32xxxx.h> // Include PIC32 specifics header file
 #include <plib.h> // Include the PIC32 Peripheral Library
 //#include <xc.h>
@@ -44,7 +44,7 @@ int main(void){
        // INTCON.MVEC = 1;
         // Use multi-vectored interrupts
             ANSELBbits.ANSB5 = 0;
-            TRISBbits.TRISB5 = 0;
+            TRISBbits.TRISB5 = 0; 
             PORTBbits.RB5 = 0;
           //  PORTBbits.RB5 = 1;
         while( 1)
