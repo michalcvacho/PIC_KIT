@@ -1,0 +1,73 @@
+CD je nedílnou souèástí knihy:
+------------------------------------------------------------------
+Aplikace algoritmù èíslicového zpracování signálù 1 
+------------------------------------------------------------------
+rozsah:	174 stran A4 + datová pøíloha
+autor:	David Matoušek, Bohumil Brtník
+vydal:	BEN – technická literatura, Vìšínova 5, 100 00 Praha 10
+vydání:	1. vydání - prosinec 2014
+ISBN:	978-80-7300-478-1
+EAN:	9788073004781
+adresa: http://shop.ben.cz/cz/121351-aplikace-algoritmu-cislicoveho-zpracovani-signalu-1.aspx
+	http://shop.ben.cz/121351
+obj.è.:	121351
+
+
+Obsah CD
+------------------------------------------------------------------
+Doprovodná pøíloha je nedílnou souèástí knihy. 
+
+
+Obsah knihy:
+------------------------------------------------------------------
+ 1. Úvod do filtrace signálù
+ 2. Metoda impulsní invariance
+ 3. Metoda skokové invariance
+ 4. Metoda uívající bilineární transformace a vycházející z toleranèního pole filtru
+ 5. Realizace èíslicovıch filtrù pomocí ATmega644
+ 6. Realizace èíslicovıch filtrù pomocí PIC32MX
+ 7. Spektrální analyzátor
+ 8. Èíslicovı mìøiè RLCG
+ 9. Èíslicovı wattmetr
+10. Pøílohy 
+
+
+
+ANOTACE
+------------------------------------------------------------------
+Kniha je urèena všem zájemcùm o problematiku èíslicového zpracování signálù a je vìnována praktickım aspektùm realizace èíslicovıch filtrù a èíslicovì pracujících mìøicích pøístrojù.
+
+Po nezbytném teoretickém úvodu, jsou prakticky realizovány filtry typu pásmová propust za pouití float-point aritmetiky, fractional aritmetiky a pomocí tabulky pøedem stanovenıch souèinù jednotlivıch koeficientù filtru. Tyto realizace jsou ovìøeny mìøením a vısledky porovnány.
+
+Druhá èást knihy je vìnována realizaci èíslicovì pracujících mìøicích pøístrojù. Je realizován spektrální analyzátor, RLCG metr a Watt-metr.
+
+První kapitola pøedstavuje úvod do filtrace signálù. Jsou pøipomenuty rùzné aproximace kmitoètovıch charakteristik. Dále je vysvìtlena realizace filtru èíslicovım zpùsobem a diskutována citlivost filtraèní funkce na zmìnu koeficientù a polohu pólù.
+Druhá kapitola pøipomíná metodu impulzní invariance, tedy realizaci èíslicového filtru tak, aby jeho impulzní charakteristika odpovídala analogovému prototypu. Uvedenı pøíklad ukazuje prakticky dosaitelné vısledky vèetnì diskuze citlivosti na koneènı poèet platnıch cifer realizovanıch koeficientù. Filtry jsou analyzovány programem MicroCap 10.
+Tøetí kapitola pøedstavuje ménì známou metodu skokové invariance.
+Ètvrtá kapitola popisuje metodu uívající bilineární transformaci a vycházející z toleranèního pole filtru. Tímto zpùsobem jsou v kapitolách 4.2 a 4.3 navreny dvì pásmové propusti, které jsou posléze v kapitolách 5 a 6 prakticky realizovány pomocí mikrokontrolérù øad Atmel AVR ATmega a Microchip PIC32MX.
+Pátá kapitola popisuje realizaci èíslicovıch filtrù pomocí mikrokontroléru ATmega644. Nejdøíve jsou dynamika sestavy pøípravkù EADC (vstupní modul pro A/D pøevodník) a MSPIDAC (sériovı 12bitovı D/A pøevodník) a jádro konstrukce filtru ovìøeny na tzv. transparentním reimu. Následují realizace pásmovıch propustí navrenıch v kapitolách 4.2 a 4.3. Realizace pomocí float-point aritmetiky není pro zvolenı vzorkovací kmitoèet 10 kHz moná. Jako alternativy jsou pøedvedeny realizace zaloené na pouití fractional aritmetiky a pøedem vypoèítané tabulky souèinù koeficientù pro 8bitové, 10bitové a 12bitové rozlišení. Na závìr jsou porovnány vısledky mìøení filtrù s ohledem na èasovou a pamìovou nároènost a vıslednı pomìr útlumu v propustné a nepropustné oblasti.
+Šestá kapitola popisuje realizaci èíslicovıch filtrù pomocí mikrokontroléru PIC32MX. Filtry dle kapitol 4.2 a 4.3 lze nyní realizovat pomocí float-point aritmetiky. Realizace pomocí fractional aritmetiky je rovnì pøedvedena. Pro fractional aritmetiku se pouívají funkce z knihovny PIC32 DSP. Dosaené vısledky jsou opìt ovìøeny mìøením a porovnány.
+Sedmá kapitola uvádí realizaci spektrálního analyzátoru. Realizace je zaloena na pouití FFT (rychlé Fourierovy transformace). Je popsána konstrukce vstupní analogové èásti (zajistí úpravu amplitudy vstupního signálu, zabraní vzniku aliasingu a vloí stejnosmìrnou sloku pro následnı A/D pøevod). Pro realizaci je pouit mikrokontrolér PIC32MX130F064B-I/SP. Spektrální analyzátor je 5-pásmovı, jednotlivá pásma jsou 100 Hz, 300 Hz, 1 kHz, 3 kHz a 10 kHz. Zobrazení amplitudy signálu v jednotlivıch pásmech je øešeno pomocí maticového displeje.
+Osmá kapitola uvádí realizaci RLCG mìøièe. Realizace spoèívá ve vytvoøení referenèního sinusového signálu pomocí D/A pøevodníku. Tento signál prochází impedanèním pøevodníkem. Následnì je vzorkován A/D pøevodníkem a pomocí korelace i a q sloek jsou stanoveny reálné a imaginární sloky mìøené impedance. Jedná se vlastnì o plnì èíslicovì provedenı vektor-voltmetr. Pro realizaci je pouit mikrokontrolér PIC32MX130F064B-I/SP. Mìøicí signál má kmitoèet 1 kHz, rozlišení pøevodu je 12bitù a na periodu pøipadá 360 vzorkù. Namìøená hodnota reálné a imaginární èásti je zobrazena na dvouøádkovém LCD displeji, kterı je ovládán pomocí SPI sbìrnice.
+V deváté kapitole je popsána realizace Watt-metru. Pro realizaci je pouit mikrokontrolér PIC32MX130F064B-I/SP. Vzorkovací kmitoèet je 50 kHz. Mikrokontrolér provádí vıpoèet èinného vıkonu, støední a efektivní hodnoty napìtí a proudu. Rovnì jsou stanoveny maximální hodnoty napìtí a proudu. Následnì je stanovena hodnota zdánlivého vıkonu. Na LDC displeji je mono zobrazit: èinnı vıkon a úèiník, maximální hodnoty napìtí a proudu, efektivní hodnoty napìtí a proudu, støední hodnoty napìtí a proudu. Tím tento pøístroj nahrazuje nejen klasickı W-metr ale také pøedstavuje levnou realizaci obvodu pro stanovení skuteèné efektivní hodnoty (True RMS) napìtí nebo proudu.
+
+V pøíloze nalezneme podklady pro vırobu jednotlivıch pøípravkù: COM644KIT (levnı vıvojovı kit pro ATmega644), EADC (vstupní modul pro A/D pøevodník), MSPIDAC (sériovı 12bitovı D/A pøevodník), PIC32MXBOARD (levnı vıvojovı kit pro PIC32MX130F064B-I/SP), SPEC_ANAL (spektrální analyzátor), RLCG METER (mìøiè RLCG), W-metr (mìøiè vıkonu, maximální a efektivní hodnoty), MLCDW (2øádkovı LCD displej). 
+
+
+COPYRIGHT
+--------------------------------------------------------
+Soubory a programy v této doprovodní pøíloze mající pøímo 
+vztah ke knize, které vytvoøil sám autor,
+(tj. obsah adresáøù COM644KIT, FOTO, KOEFTAB, PROGRAMY a SPOJE), 
+nejsou volnì šiøitelné, nebo se jedná o autorsky 
+chránìnı materiál. Další šíøení, napø. umísování 
+na jiné webové stránky nebo na jiné datové nosièe, je zakázáno.
+
+Adresáøe DATASHEET, 
+kde je materiál tøetích stran,
+podléhá copyrigtu jejich vlastníkù.
+
+Komerèní vyuití pøíkladù je povoleno jen 
+s písemnım souhlasem autora a nakladatelství. 
+
+
