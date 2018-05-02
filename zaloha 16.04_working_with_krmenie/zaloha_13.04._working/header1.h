@@ -1,7 +1,6 @@
 #ifndef header1_h
 #define header1_h
 
-
 /*cerpadlo times*/
 #define ON_Cerp_hour 11
 #define ON_Cerp_min 00
@@ -14,12 +13,13 @@
 #define OFF_filt_hour 16
 #define OFF_filt_minit 00
 
-/*krmenie times*/
-#define ON_krmenie_hour_1  10
-#define ON_krmenie_minit_1  00
 
-#define ON_krmenie_hour_2  20
-#define ON_krmenie_minit_2  15
+/*krmenie times*/
+#define ON_krmenie_hour_1  16
+#define ON_krmenie_minit_1  15
+#define ON_krmenie_second_1  30
+
+
 //DateTime now;
 typedef  enum {
   krmenie,
